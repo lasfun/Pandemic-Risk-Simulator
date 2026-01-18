@@ -9,15 +9,13 @@ This Julia-based project simulates the spread of a pandemic using an expanded SI
 
 ## The Model
 The dynamics are governed by the following system of Ordinary Differential Equations (ODEs):
-$$
-\begin{aligned}
+$$\begin{aligned}
 \frac{dS}{dt} &= \Delta N - \beta \frac{SI}{N} \\
 \frac{dI}{dt} &= \beta \frac{SI}{N} - (\gamma + \mu)I \\
 \frac{dR}{dt} &= \gamma I \\
 \frac{dD}{dt} &= \mu I \\
 \frac{dC}{dt} &= I \cdot \text{cost}_{\text{day}} + \frac{dD}{dt} \cdot \text{payout}
-\end{aligned}
-$$
+\end{aligned}$$
 
 Where:
 - **S, I, R, D:** Suspectible, Infected, Recovered, Deceased
